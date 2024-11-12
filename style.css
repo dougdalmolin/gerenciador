@@ -1,0 +1,182 @@
+/* style.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appbar {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 100%;
+    max-width: 500px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iniciativa-container h2, .creature-container h2 {
+    color: #007aff;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+.input-field {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table thead {
+    background-color: #007aff;
+    color: white;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#rodadaText {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.creature-container .button {
+    background-color: #ff3b30;
+}
+
+.creature-container .button:hover {
+    background-color: #c22b22;
+}
+
+th {
+    font-weight: bold;
+}
+
+td button {
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+td button:hover {
+    background-color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appbar h1 {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+
+    .container h2 {
+        font-size: 18px;
+    }
+}

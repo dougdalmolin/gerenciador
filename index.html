@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Iniciativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="appbar">
+        <h1>Gerenciador de RPG</h1>
+    </header>
+
+    <main class="main-container">
+        <section class="container iniciativa-container">
+            <h2>Gerenciador de Jogadores</h2>
+            <button id="cadastrarBtn" class="button">Cadastrar Jogador</button>
+            <button id="visualizarBtn" class="button">Visualizar Jogadores</button>
+            <button id="iniciativaBtn" class="button">Gerar Iniciativa</button>
+            <button id="historicoBtn" class="button">Visualizar Histórico</button>
+            <p id="rodadaText">Rodada 0</p>
+
+            <table id="resultadosTable">
+                <thead>
+                    <tr>
+                        <th>Jogador</th>
+                        <th>Jogada</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="container creature-container">
+            <h2>Gerenciador de Criaturas</h2>
+            <label>Nome da Criatura:</label>
+            <input type="text" id="nomeCriatura" class="input-field">
+            <label>Pontos de Vida (HP):</label>
+            <input type="number" id="hpCriatura" class="input-field">
+            <button onclick="adicionarCriatura()" class="button">Adicionar Criatura</button>
+
+            <table id="creatureTable">
+                <thead>
+                    <tr>
+                        <th>Criatura</th>
+                        <th>HP</th>
+                        <th>Dano</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="dialogOverlay" class="dialog-overlay">
+        <div id="dialogContent" class="dialog-content">
+            <!-- Content dynamically added by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
